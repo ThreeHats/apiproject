@@ -8,13 +8,20 @@ h1 {
 
 figure {
     text-align: center;
+    margin-top: 50px;
 }
 
 article {
+    margin-top: 50px;
     text-align: center;
 }
 
 ul {
     list-style-position: inside;
     margin-left: -40px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
 }
