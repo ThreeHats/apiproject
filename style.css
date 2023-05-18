@@ -1,0 +1,20 @@
+header {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+figure {
+    text-align: center;
+}
+
+article {
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside;
+    margin-left: -40px;
+}
