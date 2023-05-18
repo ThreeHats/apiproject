@@ -11,11 +11,12 @@ async function fetchInhabitants(){
     return inhabitants.people.filter(person => person.craft === "ISS");
 }
 
-fetchLocation().then(loc => locationP.innerHTML = `Latitude: ${loc.latitude} Longitude: ${loc.longitude}`);
+fetchLocation().then(loc => locationP.innerHTML = `Latitude: ${loc.latitude} Longitude: ${loc.longitude}`)
+    .catch(err => console.error(err));
 fetchInhabitants().then(inhab => {
     for(person of inhab){
         el = document.createElement("li");
         el.innerHTML = `${person.name}`;
         inhabitantsUl.appendChild(el);
     }
-});
+}).catch(err => console.error(err));
