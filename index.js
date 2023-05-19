@@ -18,7 +18,10 @@ async function fetchInhabitants(){
 }
 
 fetchLocation().then(loc => locationP.innerHTML = `Latitude: ${loc.latitude} Longitude: ${loc.longitude}`)
-    .catch(err => console.error(err));
+    .catch(err => {
+        locationP.innerHTML = "Error: " + err.message;
+        console.error(err);
+    });
 fetchInhabitants().then(inhab => {
     for(person of inhab){
         el = document.createElement("li");
